@@ -1,0 +1,18 @@
+Script de Backup Postgresql
+
+Aluno: Felipe Albuquerque de Oliveira
+GT3 - Noturno
+
+Criando o backup postgresql na linguagem SHELL
+1ª Etapa:
+- Incluir as variáveis "pg_dump" e "pg_restore" do postgres.
+
+2ª Etapa:
+ - Realizar a mudança de dados dos arquivos, por exemplo:
+#!/bin/bash
+export PGPASSWORD = "senha_do_postgresql"
+pg_dump -U usuário_postgresql -h local_banco -O -o -b -F c nome_banco > nome_backup.backup
+pg_restore -U usuário_postgresql  -h local_banco -d nome_banco nome_backup.backup
+
+3ª Etapa
+Executar o arquivo SHELL.
